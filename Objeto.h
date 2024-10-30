@@ -15,6 +15,7 @@ public:
   void draw();
   void update();
   void rect(); // Função paar susbtituir a função rect do pygame
+  float getX() const;
 protected:
   float largura, altura;
   std::string tela;

@@ -1,6 +1,6 @@
 #include "Objeto.h"
 #include <iostream>
-
+using namespace std;
 Objeto::Objeto(float largura, float altura, const std::string &tela,
                const std::string &sprite_nome, float velocidade,
                float x_inicial, float y_inicial, float largura_sprite,
@@ -10,11 +10,11 @@ Objeto::Objeto(float largura, float altura, const std::string &tela,
 
 void Objeto::load_images(const std::string &sprite_nome, float largura_sprite,
                          float altura_sprite) {
-  std::cout << "Carregando a imagem!" << sprite_nome << std::endl;
+  cout << "Carregando a imagem:" << sprite_nome << std::endl;
 }
 
 void Objeto::draw() {
-  // Função vazia para desenhar na tela
+    cout << "desenha o objeto" << endl;
 }
 
 void Objeto::update() {
@@ -33,4 +33,7 @@ void Objeto::rect() {
 int Objeto::getImageWidth() {
   // Função que obtem a largura
   return 1;
+}
+float Objeto::getX() const {
+    return x;  // Retorna a posição atual de x
 }
