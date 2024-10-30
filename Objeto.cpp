@@ -19,21 +19,20 @@ void Objeto::draw() {
 
 void Objeto::update() {
   x -= velocidade;
-  if (image != nullptr) {
+
     int image_width = getImageWidth(); // pega a largura da imagem
     if (x <= -image_width) {
       x = largura;
     }
-  }
 }
 void Objeto::rect() {
   // Função vazia que faz o triangulo usado para detectar colisão
 }
 
-int Objeto::getImageWidth() {
+float Objeto::getImageWidth(){
   // Função que obtem a largura
   return 1;
 }
-float Objeto::getX() const {
+float Objeto::getX(){
     return x;  // Retorna a posição atual de x
 }

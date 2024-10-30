@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Objeto.h"
 #include "Moita.h"
-#include "Tumulos.h" // Inclusão da classe Tumulos
+#include "Tumulos.h" 
 
 using namespace std;
 
@@ -11,20 +11,20 @@ using namespace std;
 int main() {
     cout << "CYG em cpp" << endl;
 
-    Moita moita(LARGURA, ALTURA, "tela_exemplo", "moita.png", 5, 800, 600, 100, 100);
-    moita.load_images("moita.png", 100, 100);
+    Moita moita(LARGURA, ALTURA, "tela_exemplo", "moita.png", 1, 800, 600, 100, 100);
+    Tumulos tumulo(LARGURA, ALTURA, "tela_exemplo", "tumulo.png", 1, 1, 600, 100, 100);
     
-    // Simulando 2 execuções para Moita
+    moita.load_images("moita.png", 100, 100);
     for (int i = 0; i < 2; ++i) {
+    // Simulando 2 execuções para Moita
         cout << "Posicao antes de update (Moita): " << moita.getX() << endl;
         moita.update();
         cout << "Posicao depois de update (Moita): " << moita.getX() << endl;
         moita.draw();
     }
     cout << "-----------------------------------------------------------" << endl;
-    Tumulos tumulo(LARGURA, ALTURA, "tela_exemplo", "tumulo.png", 3, 900, 600, 100, 100);
-    tumulo.load_images("tumulo.png", 100, 100);
     
+    tumulo.load_images("tumulo.png", 100, 100);
     for (int i = 0; i < 2; ++i) {
         cout << "Posicao antes de update (Tumulos): " << tumulo.getX() << endl;
         tumulo.update();

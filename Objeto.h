@@ -15,7 +15,7 @@ public:
   void draw();
   void update();
   void rect(); // Função paar susbtituir a função rect do pygame
-  float getX() const;
+  float getX();
 protected:
   float largura, altura;
   std::string tela;
@@ -23,7 +23,7 @@ protected:
   float x, y;
   void *image;
 
-  int getImageWidth(); // Função vazia para obter a largura da imagem
+  float getImageWidth(); // Função vazia para obter a largura da imagem
 };
 
 #endif
