@@ -7,16 +7,13 @@
 
 class Fantasma : public Entidade {
 public:
-    Fantasma(int largura, int altura);
-
-    void update() override;
-    void draw() override;
+    Fantasma(int largura, int altura, int telaLargura, int telaAltura);
+    void update();
+    void draw();
 
 private:
-    void carregar_imagens();
-    std::vector<std::string> caminhos_imagens;
-    int tamanho_imagem_x = 135;
-    int tamanho_imagem_y = 87;
+    std::pair<int, int> tamanhoImagem;
+    int rectX, rectY; 
 };
 
 #endif
